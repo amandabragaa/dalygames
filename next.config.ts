@@ -4,6 +4,12 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "sujeitoprogramador.com",
+      },
+    ],
     qualities: [75, 100],
   },
 };

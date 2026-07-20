@@ -7,7 +7,7 @@ import { LiaGamepadSolid } from "react-icons/lia";
 export function Header() {
   return (
     <header className="w-full h-28 bg-slate-100 text-black px-2">
-      <div className="max-w-xl mx-auto flex justify-center items-center h-28 sm:justify-between">
+      <div className="max-w-7xl mx-auto flex justify-center items-center h-28 sm:justify-between">
         <nav className="flex justify-center items-center gap-4">
           <Link href="/">
             <Image
@@ -15,7 +15,7 @@ export function Header() {
               alt="Logo do site dalygames"
               quality={100}
               priority={true}
-              className="w-full"
+              className="w-full h-auto"
             />
           </Link>
 
