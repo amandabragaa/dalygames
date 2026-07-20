@@ -65,9 +65,12 @@ export default async function Home() {
 
         <h2 className="texte-lg font-bold mt-8 mb-5">Jogos para conhecer</h2>
         <section className="grid gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {gamesData.map((item) => (
-            <GameCard key={item.id} data={item} />
-          ))}
+          {gamesData.map((item, index) => {
+            const isPrioridade = index <= 3;
+            return (
+              <GameCard key={item.id} data={item} prioridade={isPrioridade} />
+            );
+          })}
         </section>
       </Container>
     </main>

@@ -5,9 +5,10 @@ import { GameProps } from "@/utils/type/games";
 
 interface GameCardProps {
   data: GameProps;
+  prioridade?: boolean;
 }
 
-export function GameCard({ data }: GameCardProps) {
+export function GameCard({ data, prioridade }: GameCardProps) {
   return (
     <Link href={`/game/${data.id}`}>
       <section className="w-full bg-slate-200 rounded-lg p-4 mb-5">
@@ -17,6 +18,7 @@ export function GameCard({ data }: GameCardProps) {
             src={data.image_url}
             alt={data.title}
             fill={true}
+            priority={prioridade}
             quality={100}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 44vw"
           />
